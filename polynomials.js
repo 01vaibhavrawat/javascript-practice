@@ -1,4 +1,4 @@
-let A = [ 2, 5, 3]
+/*let A = [ 2, 5, 3]
 let B = [6, 2, 4]
 let n = 3
 let p = []
@@ -15,4 +15,4 @@ function mult(){
 }
 mult()
 
-console.log(p)
+console.log(p)*/
