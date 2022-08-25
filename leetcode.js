@@ -47,7 +47,7 @@ var moveZeroes = function(nums){
       }
   }
     console.log(nums, c, l);
-    nums.splice(c, l-c);
+    nums.splice(c, l-cl);
     return nums;
 };
 console.log(moveZeroes([0,1,0,3,12]));
