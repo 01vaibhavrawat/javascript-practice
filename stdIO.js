@@ -1,4 +1,57 @@
-let input = `100000
+let input = `2
+6
+1 2 3 4 5 6
+2
+1 11
+4
+1 2 4 6`;
+input = input.split('\n');
+for(let i=2;i<=input.length;i+=2){
+console.log('f')
+    let arr = input[i].split(' ');
+
+    for(let x in arr){
+    arr[x] = parseInt(arr[x]);
+    }
+
+    let len = arr.length;
+    let last = arr[len-1];
+
+    let l = 0;
+    let j = 0;
+    while(j<len){
+        arr.splice(0, j)
+        console.log(arr)
+        const n = arr.indexOf(l+1);
+        const n2 = arr.indexOf(l);
+        const n3 = arr.indexOf(l-1);
+        if(n > -1){
+            j = n;
+            l++;
+        }else if(n2>0){
+            j = n2;
+        }else if(n3>-1){
+            j = n3;
+            l--;
+        }else{
+            console.log('no');
+            j = len;
+        }
+        if(arr[j]==last){
+            console.log('YES');
+            j = len;
+        }
+        }
+}
+
+
+
+
+
+
+
+
+/*let input = `100000
 6 4 1
 8 6 5
 7 4 3
@@ -33,4 +86,4 @@ for(let x in input){
     }
     for(let x of output){
     process.stdout.write(x + "\n"); 
-    }
+    }*/
